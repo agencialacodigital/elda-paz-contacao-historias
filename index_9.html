@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contação de Histórias em 30 Minutos | Elda Paz</title>
+<meta name="description" content="Aprenda o método LER → VER → MARCAR → CONTAR e prepare qualquer história em até 30 minutos, sem decorar palavra por palavra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-deep:#0F3D6E;
+    --blue-primary:#1E64B4;
+    --blue-soft:#EAF3FB;
+    --blue-line:#C9DDF2;
+    --gold:#F5B400;
+    --gold-deep:#C98A00;
+    --gold-soft:#FFF3D2;
+    --cream:#FFFCF6;
+    --ink:#1E2A38;
+    --ink-soft:#4C5A6B;
+    --wand:#4FA37A;
+    --white:#FFFFFF;
+    --radius-lg:28px;
+    --radius-md:18px;
+    --radius-sm:10px;
+    --shadow-soft:0 20px 50px -25px rgba(15,61,110,0.35);
+    --maxw:1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans', system-ui, sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, serif;
+    color:var(--blue-deep);
+    margin:0 0 .5em;
+    line-height:1.12;
+    font-weight:600;
+  }
+  p{margin:0 0 1em;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;position:relative;}
+  @media (max-width:720px){ section{padding:64px 0;} }
+
+  :focus-visible{outline:3px solid var(--gold-deep);outline-offset:3px;border-radius:6px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  .eyebrow{
+    font-family:'Caveat',cursive;
+    font-size:1.5rem;
+    color:var(--wand);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:6px;
+    font-weight:600;
+  }
+  .eyebrow svg{flex:0 0 auto;}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-family:'Work Sans',sans-serif;
+    font-weight:700;
+    font-size:1.02rem;
+    text-decoration:none;
+    padding:19px 34px;
+    border-radius:100px;
+    border:none;
+    cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    letter-spacing:.2px;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    color:var(--blue-deep);
+    box-shadow:0 14px 30px -12px rgba(201,138,0,0.65);
+  }
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 34px -12px rgba(201,138,0,0.75);}
+  .btn-primary:active{transform:translateY(0);}
+  .btn-ghost{
+    background:transparent;
+    border:2px solid var(--blue-primary);
+    color:var(--blue-primary);
+  }
+  .btn-ghost:hover{background:var(--blue-soft);}
+  .btn-wrap{display:flex;justify-content:center;margin-top:36px;}
+  .btn-sub{
+    text-align:center;
+    font-size:.88rem;
+    color:var(--ink-soft);
+    margin-top:12px;
+  }
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,252,246,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--blue-line);
+    padding:14px 0;
+  }
+  .site-header .container{display:flex;align-items:center;justify-content:space-between;}
+  .site-header img{height:34px;width:auto;}
+  .header-cta{
+    font-size:.85rem;
+    padding:12px 22px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding-top:72px;
+    padding-bottom:60px;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, var(--blue-soft) 0%, transparent 60%),
+      radial-gradient(ellipse 700px 500px at 110% 10%, var(--gold-soft) 0%, transparent 55%);
+  }
+  .hero .container{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:56px;
+    align-items:center;
+  }
+  @media (max-width:900px){
+    .hero .container{grid-template-columns:1fr;}
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 4.4vw, 3.35rem);
+    letter-spacing:-.01em;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--blue-primary);
+    position:relative;
+  }
+  .hero-lede{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:52ch;
+  }
+  .hero-negs{
+    list-style:none;
+    margin:26px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .hero-negs li{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    color:var(--ink-soft);
+    font-size:.98rem;
+  }
+  .hero-negs svg{flex:0 0 auto;margin-top:3px;}
+  .hero-cta{margin-top:34px;}
+
+  /* Hero visual: the story map */
+  .hero-visual{position:relative;}
+  .map-card{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-soft);
+    padding:34px 30px 30px;
+    border:1px solid var(--blue-line);
+    position:relative;
+  }
+  .map-card svg{width:100%;height:auto;display:block;}
+  .map-caption{
+    font-family:'Caveat',cursive;
+    color:var(--wand);
+    font-size:1.35rem;
+    text-align:center;
+    margin-top:6px;
+    font-weight:600;
+  }
+
+  /* ---------- Divider path (signature) ---------- */
+  .path-divider{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0 auto;
+  }
+
+  /* ---------- Section headers ---------- */
+  .section-head{
+    max-width:680px;
+    margin:0 auto 48px;
+    text-align:center;
+  }
+  .section-head h2{font-size:clamp(1.7rem, 3.2vw, 2.4rem);}
+  .section-head p{color:var(--ink-soft);font-size:1.05rem;margin-top:10px;}
+
+  /* ---------- Identificação ---------- */
+  .id-section{background:var(--white);}
+  .id-flow{
+    max-width:640px;
+    margin:0 auto;
+  }
+  .id-flow p{color:var(--ink-soft);font-size:1.08rem;}
+  .id-callout{
+    background:var(--blue-deep);
+    color:var(--white);
+    border-radius:var(--radius-md);
+    padding:30px 34px;
+    margin:26px 0;
+    font-family:'Fraunces',serif;
+    font-size:1.35rem;
+    font-style:italic;
+    text-align:center;
+  }
+  .id-flow .lede-final{
+    text-align:center;
+    font-size:1.15rem;
+    color:var(--blue-deep);
+    font-weight:600;
+  }
+
+  /* ---------- Mudança de crença ---------- */
+  .belief-section{
+    background:var(--blue-soft);
+  }
+  .belief-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  @media (max-width:820px){.belief-grid{grid-template-columns:1fr;gap:32px;}}
+  .belief-list{list-style:none;margin:20px 0;padding:0;}
+  .belief-list li{
+    padding:10px 0 10px 30px;
+    position:relative;
+    color:var(--ink-soft);
+  }
+  .belief-list li::before{
+    content:"";
+    position:absolute;left:0;top:17px;
+    width:14px;height:2px;
+    background:var(--gold-deep);
+  }
+  .belief-punch{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:1.4rem;
+    color:var(--blue-primary);
+  }
+  .belief-visual{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    padding:36px;
+    box-shadow:var(--shadow-soft);
+    text-align:center;
+  }
+  .belief-visual .big-q{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    color:var(--gold-deep);
+    font-size:2.6rem;
+    line-height:1.1;
+  }
+  .belief-visual p{color:var(--ink-soft);margin-top:12px;}
+
+  /* ---------- Para quem é ---------- */
+  .who-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    max-width:820px;
+    margin:0 auto;
+  }
+  @media (max-width:680px){.who-grid{grid-template-columns:1fr;}}
+  .who-card{
+    background:var(--white);
+    border:1px solid var(--blue-line);
+    border-radius:var(--radius-md);
+    padding:22px 22px 22px 54px;
+    position:relative;
+    font-size:.98rem;
+    color:var(--ink);
+  }
+  .who-card svg{position:absolute;left:20px;top:24px;}
+
+  /* ---------- Transformação ---------- */
+  .transform-section{
+    background:linear-gradient(180deg, var(--blue-deep) 0%, #143f73 100%);
+    color:var(--white);
+  }
+  .transform-section h2{color:var(--white);}
+  .transform-section .section-head p{color:#C6D9EF;}
+  .scene-path{
+    max-width:760px;
+    margin:0 auto;
+  }
+  .scene-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+    margin:30px 0 34px;
+  }
+  .scene-chip{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.25);
+    color:var(--white);
+    padding:10px 20px;
+    border-radius:100px;
+    font-size:.95rem;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .scene-chip svg{flex:0 0 auto;}
+  .transform-final{
+    text-align:center;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:1.3rem;
+    color:var(--gold);
+  }
+
+  /* ---------- Problema ---------- */
+  .problem-section{background:var(--white);}
+  .swap-box{
+    max-width:700px;
+    margin:34px auto;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    gap:18px;
+    align-items:center;
+  }
+  @media (max-width:620px){.swap-box{grid-template-columns:1fr;}}
+  .swap-card{
+    border-radius:var(--radius-md);
+    padding:24px;
+    text-align:center;
+    font-family:'Fraunces',serif;
+    font-size:1.15rem;
+  }
+  .swap-old{background:#FBEAEA;color:#8A3B3B;font-style:italic;}
+  .swap-new{background:var(--gold-soft);color:var(--blue-deep);font-weight:600;}
+  .swap-arrow{color:var(--wand);}
+  .problem-close{
+    text-align:center;
+    max-width:600px;
+    margin:0 auto;
+    color:var(--ink-soft);
+  }
+  .problem-close strong{color:var(--blue-deep);}
+
+  /* ---------- Método (signature step path) ---------- */
+  .method-section{
+    background:var(--blue-soft);
+    position:relative;
+  }
+  .method-track{
+    max-width:920px;
+    margin:56px auto 0;
+    position:relative;
+  }
+  .method-steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:26px;
+    position:relative;
+    z-index:2;
+  }
+  @media (max-width:880px){
+    .method-steps{grid-template-columns:1fr;gap:20px;}
+  }
+  .step-card{
+    background:var(--white);
+    border-radius:var(--radius-md);
+    padding:28px 22px;
+    box-shadow:var(--shadow-soft);
+    border:1px solid var(--blue-line);
+    position:relative;
+  }
+  .step-mark{
+    width:52px;height:52px;
+    border-radius:50%;
+    background:var(--blue-deep);
+    color:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:1.15rem;
+    margin-bottom:16px;
+  }
+  .step-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .step-card p{font-size:.92rem;color:var(--ink-soft);margin:0;}
+  .method-cta{margin-top:44px;}
+
+  /* Teaser version: names only, no instructions */
+  .method-steps-mini{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-bottom:32px;
+  }
+  .mini-step{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+  .mini-step .step-mark{margin-bottom:0;}
+  .mini-step span.mini-label{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    color:var(--blue-deep);
+    font-size:1.02rem;
+  }
+  .mini-arrow{
+    color:var(--gold-deep);
+    font-size:1.3rem;
+    margin:0 2px 26px;
+  }
+  @media (max-width:640px){
+    .mini-arrow{transform:rotate(90deg);margin:0 0 26px;}
+    .method-steps-mini{flex-direction:column;}
+  }
+  .method-teaser{
+    max-width:620px;
+    margin:0 auto;
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+  }
+  .method-teaser strong{color:var(--blue-deep);}
+
+  /* ---------- 30 Minutos timer ---------- */
+  .timer-section{background:var(--white);}
+  .timer-strip{
+    display:flex;
+    max-width:900px;
+    margin:36px auto 30px;
+    border-radius:100px;
+    overflow:hidden;
+    box-shadow:var(--shadow-soft);
+  }
+  .timer-seg{
+    flex:1;
+    padding:22px 12px;
+    text-align:center;
+    color:var(--white);
+    position:relative;
+  }
+  .timer-seg .min{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:1.5rem;
+    display:block;
+  }
+  .timer-seg .lab{font-size:.82rem;opacity:.9;}
+  .timer-seg:nth-child(1){background:#7FB0DB;}
+  .timer-seg:nth-child(2){background:var(--blue-primary);}
+  .timer-seg:nth-child(3){background:#2E4E7C;}
+  .timer-seg:nth-child(4){background:var(--blue-deep);}
+  .timer-note{
+    text-align:center;
+    max-width:560px;
+    margin:0 auto;
+    color:var(--ink-soft);
+  }
+  .timer-note strong{color:var(--blue-deep);}
+
+  /* ---------- Improvisação ---------- */
+  .improv-section{background:var(--blue-soft);}
+  .improv-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    max-width:960px;
+    margin:36px auto 0;
+  }
+  @media (max-width:820px){.improv-grid{grid-template-columns:1fr;}}
+  .improv-card{
+    background:var(--white);
+    border-radius:var(--radius-md);
+    padding:26px;
+    border-top:4px solid var(--blue-primary);
+  }
+  .improv-card:nth-child(2){border-top-color:var(--gold);}
+  .improv-card:nth-child(3){border-top-color:var(--wand);}
+  .improv-card h4{font-size:1.05rem;margin-bottom:10px;color:var(--blue-deep);}
+  .improv-card p{font-size:.92rem;color:var(--ink-soft);margin:0;}
+  .improv-example{
+    max-width:760px;
+    margin:40px auto 0;
+    background:var(--white);
+    border-radius:var(--radius-md);
+    padding:28px 30px;
+    box-shadow:var(--shadow-soft);
+  }
+  .improv-example .line{margin-bottom:14px;}
+  .improv-example .tag{
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--ink-soft);
+    font-weight:700;
+    display:block;
+    margin-bottom:4px;
+  }
+  .improv-example .txt-before{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);}
+  .improv-example .txt-after{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--blue-primary);font-weight:600;}
+  .improv-teaser{
+    max-width:620px;
+    margin:36px auto 0;
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+  }
+
+  /* ---------- Regra de ouro ---------- */
+  .rule-section{
+    background:var(--blue-deep);
+    color:var(--white);
+    text-align:center;
+  }
+  .rule-quote{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:clamp(1.4rem,3vw,2.1rem);
+    max-width:760px;
+    margin:0 auto 22px;
+    color:var(--gold);
+  }
+  .rule-section p.sub{color:#C6D9EF;max-width:600px;margin:0 auto;}
+
+  /* ---------- Módulos ---------- */
+  .modules-section{background:var(--white);}
+  .module-list{
+    max-width:820px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .module-item{
+    border:1px solid var(--blue-line);
+    border-radius:var(--radius-md);
+    padding:26px 28px;
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:20px;
+    align-items:flex-start;
+  }
+  @media (max-width:600px){.module-item{grid-template-columns:1fr;}}
+  .module-num{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    color:var(--gold-deep);
+    font-size:1.1rem;
+    font-weight:600;
+  }
+  .module-item h3{font-size:1.15rem;margin-bottom:10px;}
+  .lesson{
+    padding:10px 0;
+    border-top:1px dashed var(--blue-line);
+  }
+  .lesson:first-of-type{border-top:none;padding-top:0;}
+  .lesson strong{color:var(--blue-deep);display:block;font-size:.98rem;margin-bottom:3px;}
+  .lesson span{color:var(--ink-soft);font-size:.9rem;}
+
+  /* ---------- Material complementar ---------- */
+  .material-section{
+    background:var(--gold-soft);
+  }
+  .material-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:center;
+    max-width:960px;
+    margin:0 auto;
+  }
+  @media (max-width:820px){.material-grid{grid-template-columns:1fr;}}
+  .material-card{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    padding:30px;
+    box-shadow:var(--shadow-soft);
+  }
+  .material-fields{list-style:none;margin:14px 0 0;padding:0;columns:2;column-gap:20px;}
+  .material-fields li{
+    font-size:.86rem;
+    color:var(--ink-soft);
+    padding:6px 0 6px 18px;
+    position:relative;
+    break-inside:avoid;
+  }
+  .material-fields li::before{
+    content:"";
+    position:absolute;left:0;top:13px;
+    width:8px;height:8px;
+    border-radius:50%;
+    background:var(--wand);
+  }
+
+  /* ---------- Resultados ---------- */
+  .results-section{background:var(--white);}
+  .results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    max-width:980px;
+    margin:0 auto;
+  }
+  @media (max-width:820px){.results-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.results-grid{grid-template-columns:1fr;}}
+  .result-card{
+    background:var(--blue-soft);
+    border-radius:var(--radius-md);
+    padding:24px 22px;
+    font-size:.95rem;
+    color:var(--ink);
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+  }
+  .result-card svg{flex:0 0 auto;margin-top:2px;}
+  .results-close{
+    text-align:center;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:1.25rem;
+    color:var(--blue-primary);
+    max-width:600px;
+    margin:40px auto 0;
+  }
+
+  /* ---------- Prova social ---------- */
+  .testimonials-section{background:var(--blue-soft);}
+  .test-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    max-width:980px;
+    margin:0 auto;
+  }
+  @media (max-width:820px){.test-grid{grid-template-columns:1fr;}}
+  .test-card{
+    background:var(--white);
+    border-radius:var(--radius-md);
+    padding:26px;
+    box-shadow:var(--shadow-soft);
+  }
+  .test-card q{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    color:var(--blue-deep);
+    font-size:1.05rem;
+    display:block;
+    margin-bottom:14px;
+  }
+  .test-who{font-size:.85rem;color:var(--ink-soft);font-weight:600;}
+
+  /* ---------- Autora ---------- */
+  .author-section{background:var(--white);}
+  .author-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:48px;
+    align-items:center;
+    max-width:960px;
+    margin:0 auto;
+  }
+  @media (max-width:780px){.author-grid{grid-template-columns:1fr;}}
+  .author-photo{
+    aspect-ratio:4/5;
+    border-radius:var(--radius-lg);
+    background:
+      radial-gradient(ellipse at 30% 20%, var(--gold-soft), transparent 60%),
+      var(--blue-soft);
+    border:1px solid var(--blue-line);
+    overflow:hidden;
+    position:relative;
+  }
+  .author-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 15%;
+  }
+  .author-books{
+    display:flex;
+    gap:12px;
+    margin-top:18px;
+    flex-wrap:wrap;
+  }
+  .book-chip{
+    background:var(--blue-soft);
+    color:var(--blue-deep);
+    border:1px solid var(--blue-line);
+    padding:8px 16px;
+    border-radius:100px;
+    font-size:.85rem;
+    font-weight:600;
+  }
+
+  /* ---------- Oferta / Preço ---------- */
+  .offer-section{
+    background:linear-gradient(180deg, var(--blue-deep), #0B2E52);
+    color:var(--white);
+  }
+  .offer-section h2{color:var(--white);}
+  .offer-section .section-head p{color:#C6D9EF;}
+  .offer-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:40px;
+    max-width:980px;
+    margin:0 auto;
+    align-items:stretch;
+  }
+  @media (max-width:820px){.offer-grid{grid-template-columns:1fr;}}
+  .offer-includes{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:var(--radius-lg);
+    padding:34px;
+  }
+  .offer-includes ul{list-style:none;margin:0;padding:0;}
+  .offer-includes li{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:11px 0;
+    border-bottom:1px dashed rgba(255,255,255,0.18);
+    font-size:.96rem;
+  }
+  .offer-includes li:last-child{border-bottom:none;}
+  .offer-includes svg{flex:0 0 auto;margin-top:3px;}
+
+  .price-card{
+    background:var(--white);
+    color:var(--ink);
+    border-radius:var(--radius-lg);
+    padding:36px 30px;
+    text-align:center;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.5);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .price-old{
+    text-decoration:line-through;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+  }
+  .price-new{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    color:var(--blue-deep);
+    font-size:clamp(2.6rem,6vw,3.4rem);
+    margin:6px 0;
+    line-height:1;
+  }
+  .price-new sup{font-size:.42em;top:-.6em;}
+  .price-installment{color:var(--ink-soft);font-size:.95rem;margin-bottom:20px;}
+  .price-card .btn{width:100%;}
+  .price-guarantee{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-top:16px;
+    font-size:.82rem;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- Recap ---------- */
+  .recap-section{background:var(--gold-soft);text-align:center;}
+  .recap-tags{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
+    max-width:820px;margin:26px auto 0;
+  }
+  .recap-tags span{
+    background:var(--white);
+    border:1px solid var(--blue-line);
+    padding:9px 16px;
+    border-radius:100px;
+    font-size:.87rem;
+    color:var(--blue-deep);
+    font-weight:600;
+  }
+
+  /* ---------- Garantia ---------- */
+  .guarantee-section{background:var(--white);}
+  .guarantee-box{
+    max-width:760px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:28px;
+    align-items:center;
+    background:var(--blue-soft);
+    border-radius:var(--radius-lg);
+    padding:40px;
+  }
+  @media (max-width:600px){.guarantee-box{grid-template-columns:1fr;text-align:center;}}
+  .guarantee-box h3{margin-bottom:8px;}
+  .guarantee-box p{color:var(--ink-soft);margin:0;}
+
+  /* ---------- Objeções ---------- */
+  .faq-objections{background:var(--white);}
+  .accordion{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+  .acc-item{
+    border:1px solid var(--blue-line);
+    border-radius:var(--radius-md);
+    overflow:hidden;
+    background:var(--cream);
+  }
+  .acc-item summary{
+    list-style:none;
+    cursor:pointer;
+    padding:20px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    color:var(--blue-deep);
+    font-size:1.02rem;
+  }
+  .acc-item summary::-webkit-details-marker{display:none;}
+  .acc-item .icon-plus{
+    flex:0 0 auto;
+    width:26px;height:26px;
+    border-radius:50%;
+    background:var(--blue-soft);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+    transition:transform .2s ease;
+  }
+  .acc-item .icon-plus::before,.acc-item .icon-plus::after{
+    content:"";position:absolute;background:var(--blue-primary);
+  }
+  .acc-item .icon-plus::before{width:11px;height:2px;}
+  .acc-item .icon-plus::after{width:2px;height:11px;}
+  .acc-item[open] .icon-plus{transform:rotate(45deg);}
+  .acc-item .acc-body{padding:0 24px 22px;color:var(--ink-soft);}
+
+  /* ---------- Fechamento ---------- */
+  .closing-section{
+    background:
+      radial-gradient(ellipse 800px 500px at 50% 0%, var(--blue-soft), transparent 60%),
+      var(--cream);
+    text-align:center;
+  }
+  .closing-lines{
+    max-width:640px;
+    margin:0 auto 30px;
+  }
+  .closing-lines p{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:1.3rem;
+    color:var(--blue-deep);
+    margin:0 0 8px;
+  }
+  .closing-final{
+    font-family:'Caveat',cursive;
+    font-size:2rem;
+    color:var(--wand);
+    font-weight:700;
+    margin:22px 0 8px;
+  }
+  .closing-price{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:2rem;
+    color:var(--blue-deep);
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-section{background:var(--blue-soft);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--blue-deep);
+    color:#B9CDE3;
+    padding:44px 0 30px;
+    text-align:center;
+    font-size:.85rem;
+  }
+  footer img{height:26px;margin:0 auto 14px;filter:brightness(0) invert(1) opacity(.9);}
+
+  /* ---------- Checkout Modal ---------- */
+  .modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(15,61,110,0.55);
+    backdrop-filter:blur(3px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:200;
+    padding:20px;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal-box{
+    background:var(--cream);
+    border-radius:var(--radius-lg);
+    max-width:440px;
+    width:100%;
+    padding:36px 32px;
+    position:relative;
+    box-shadow:0 30px 80px -20px rgba(0,0,0,0.5);
+    max-height:90vh;
+    overflow-y:auto;
+  }
+  .modal-close{
+    position:absolute;
+    top:16px; right:16px;
+    width:34px;height:34px;
+    border-radius:50%;
+    border:none;
+    background:var(--blue-soft);
+    color:var(--blue-deep);
+    font-size:1.1rem;
+    cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    line-height:1;
+  }
+  .modal-close:hover{background:var(--blue-line);}
+  .modal-box h3{
+    font-size:1.35rem;
+    margin-bottom:6px;
+    padding-right:30px;
+  }
+  .modal-sub{
+    color:var(--ink-soft);
+    font-size:.92rem;
+    margin-bottom:22px;
+  }
+  .modal-field{
+    margin-bottom:16px;
+  }
+  .modal-field label{
+    display:block;
+    font-size:.82rem;
+    font-weight:600;
+    color:var(--blue-deep);
+    margin-bottom:6px;
+  }
+  .modal-field input{
+    width:100%;
+    padding:13px 14px;
+    border-radius:var(--radius-sm);
+    border:1px solid var(--blue-line);
+    background:var(--white);
+    font-family:'Work Sans',sans-serif;
+    font-size:.95rem;
+    color:var(--ink);
+  }
+  .modal-field input:focus{
+    outline:none;
+    border-color:var(--blue-primary);
+    box-shadow:0 0 0 3px rgba(30,100,180,0.15);
+  }
+  .modal-field input:invalid:not(:placeholder-shown){
+    border-color:#C9576B;
+  }
+  .modal-submit{
+    width:100%;
+    margin-top:6px;
+    padding:16px;
+    font-size:1rem;
+  }
+  .modal-note{
+    text-align:center;
+    font-size:.78rem;
+    color:var(--ink-soft);
+    margin-top:14px;
+  }
+
+  /* ---------- Sticky mobile CTA ---------- */
+  .sticky-cta{
+    position:fixed;
+    bottom:0;left:0;right:0;
+    background:var(--white);
+    border-top:1px solid var(--blue-line);
+    padding:12px 16px;
+    display:none;
+    z-index:60;
+    box-shadow:0 -8px 24px -12px rgba(0,0,0,0.2);
+  }
+  .sticky-cta .btn{width:100%;padding:15px;font-size:.95rem;}
+  @media (max-width:720px){
+    .sticky-cta{display:block;}
+    body{padding-bottom:74px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <img src="eldapaz-logo.png" alt="Elda Paz">
+    <a href="#oferta" class="btn btn-primary header-cta">Quero aprender</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z" fill="#F5B400"/></svg>
+        Para professoras, educadoras e contadoras de histórias
+      </span>
+      <h1>Você não precisa decorar uma história inteira para contá-la <em>sem o livro nas mãos.</em></h1>
+      <p class="hero-lede">Aprenda um método simples para preparar qualquer história em até 30 minutos, memorizar sua sequência e contar com muito mais naturalidade, liberdade e segurança — sem decorar palavra por palavra.</p>
+      <ul class="hero-negs">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#C9576B" stroke-width="2.4" stroke-linecap="round"/></svg> Sem tentar decorar palavra por palavra</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#C9576B" stroke-width="2.4" stroke-linecap="round"/></svg> Sem depender do texto durante toda a contação</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#C9576B" stroke-width="2.4" stroke-linecap="round"/></svg> Sem aquele medo de esquecer a próxima frase</li>
+      </ul>
+      <div class="hero-cta">
+        <a href="#oferta" class="btn btn-primary">Quero aprender o método</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="map-card">
+        <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M30 250 C 70 210, 40 170, 90 150 S 150 100, 130 60 S 220 40, 210 90 S 300 110, 320 60" fill="none" stroke="#C9DDF2" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
+          <g font-family="Work Sans" font-size="11" fill="#4C5A6B">
+            <circle cx="30" cy="250" r="7" fill="#1E64B4"/>
+            <text x="42" y="254">Casa</text>
+            <circle cx="90" cy="150" r="7" fill="#1E64B4"/>
+            <text x="102" y="154">Floresta</text>
+            <circle cx="130" cy="60" r="7" fill="#1E64B4"/>
+            <text x="142" y="64">Ponte</text>
+            <circle cx="210" cy="90" r="7" fill="#1E64B4"/>
+            <text x="222" y="94">Castelo</text>
+            <circle cx="320" cy="60" r="9" fill="#F5B400"/>
+            <path d="M320 51 l1.8 5.6 5.6 1.4-5.6 1.4L320 65l-1.8-5.6-5.6-1.4 5.6-1.4z" fill="#F5B400" opacity=".85" transform="translate(0,-9) scale(0.9)"/>
+          </g>
+        </svg>
+        <p class="map-caption">o caminho da história ✨</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== IDENTIFICAÇÃO ===================== -->
+<section class="id-section">
+  <div class="container id-flow">
+    <h2 style="text-align:center;">Se contar uma história sem olhar para o livro ainda deixa você insegura, existe um motivo.</h2>
+    <p style="text-align:center;">Muitas professoras aprenderam que, para contar bem uma história, precisam primeiro decorar tudo. Então começam a ler várias vezes. Tentam guardar cada frase. Voltam ao começo. Repetem novamente.</p>
+    <p style="text-align:center;">E quando chega o momento de contar, basta esquecer uma palavra para surgir aquela sensação:</p>
+    <div class="id-callout">"E agora? O que vinha depois?"</div>
+    <p style="text-align:center;">É justamente aí que a contação, que deveria ser um momento de conexão, imaginação e encantamento, começa a parecer uma prova de memória. Mas existe uma maneira muito mais simples de fazer isso.</p>
+    <p class="lede-final">Você não precisa memorizar as palavras da história. Precisa conhecer o caminho dela.</p>
+  </div>
+</section>
+
+<!-- ===================== MUDANÇA DE CRENÇA ===================== -->
+<section class="belief-section">
+  <div class="container belief-grid">
+    <div>
+      <h2>Pense em uma história que aconteceu com você ontem.</h2>
+      <p>Se alguém pedir para você contar o que aconteceu, provavelmente você conseguirá — e existe uma grande chance de você nunca ter ensaiado aquela história.</p>
+      <ul class="belief-list">
+        <li>Você não decorou nenhuma frase</li>
+        <li>Não escreveu um roteiro</li>
+        <li>Não ficou repetindo as palavras antes de falar</li>
+        <li>Mesmo assim, consegue contar</li>
+      </ul>
+      <p class="belief-punch">Porque você sabe o que aconteceu. Você consegue visualizar as pessoas, os lugares, os acontecimentos e a sequência.</p>
+    </div>
+    <div class="belief-visual">
+      <div class="big-q">É esse mesmo mecanismo que você vai aprender a usar na contação de histórias.</div>
+      <p>Quando você deixa de tentar memorizar palavras e começa a memorizar imagens e acontecimentos, contar uma história fica muito mais natural.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PARA QUEM É ===================== -->
+<section class="who-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Este curso é para você que...</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#4FA37A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        É professora, educadora, contadora de histórias ou trabalha com crianças e gostaria de contar com mais naturalidade.
+      </div>
+      <div class="who-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#4FA37A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Sente que precisa ficar olhando para o livro para lembrar o que acontece.
+      </div>
+      <div class="who-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#4FA37A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Lê uma história várias vezes antes de se sentir preparada para contá-la.
+      </div>
+      <div class="who-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#4FA37A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Fica preocupada em esquecer uma frase ou trocar alguma palavra.
+      </div>
+      <div class="who-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#4FA37A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Gostaria de usar mais gestos, expressões, pausas, vozes e criatividade durante a contação.
+      </div>
+      <div class="who-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#4FA37A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Quer pegar uma história nova e se preparar sem passar horas tentando memorizá-la.
+      </div>
+    </div>
+    <div class="btn-wrap"><a href="#oferta" class="btn btn-primary">Quero contar histórias com mais naturalidade</a></div>
+  </div>
+</section>
+
+<!-- ===================== TRANSFORMAÇÃO ===================== -->
+<section class="transform-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Imagine pegar uma história que você nunca contou antes...</h2>
+      <p>Fazer uma leitura. Identificar as cenas mais importantes. Criar um pequeno mapa. Fechar o livro. E saber exatamente por onde começar, o que acontece depois e onde aquela história termina.</p>
+    </div>
+    <div class="scene-path">
+      <div class="scene-list">
+        <span class="scene-chip">🏠 A menina saindo de casa</span>
+        <span class="scene-chip">🧺 A cesta em suas mãos</span>
+        <span class="scene-chip">🌲 A floresta</span>
+        <span class="scene-chip">💧 O riacho</span>
+        <span class="scene-chip">🏡 A casa da avó</span>
+      </div>
+      <p class="transform-final">Quando essas imagens estão claras dentro de você, as palavras começam a aparecer naturalmente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== O PROBLEMA ===================== -->
+<section class="problem-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>O maior erro é tentar decorar a história palavra por palavra.</h2>
+      <p>Quando você tenta memorizar exatamente o que está escrito, qualquer palavra esquecida pode fazer parecer que todo o restante desapareceu — porque sua mente está procurando a próxima frase.</p>
+    </div>
+    <div class="swap-box">
+      <div class="swap-card swap-old">"Qual é a próxima palavra?"</div>
+      <div class="swap-arrow">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 12h15M13 6l6 6-6 6" stroke="#F5B400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="swap-card swap-new">"O que aconteceu depois?"</div>
+    </div>
+    <p class="problem-close">Parece uma mudança pequena. Mas ela transforma completamente a maneira de memorizar uma narrativa. Porque histórias não são apenas palavras. <strong>Histórias são acontecimentos, personagens, lugares, movimentos e imagens.</strong></p>
+  </div>
+</section>
+
+<!-- ===================== MÉTODO ===================== -->
+<section class="method-section" id="metodo">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="justify-content:center;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z" fill="#F5B400"/></svg>
+        O método
+      </span>
+      <h2>LER → VER → MARCAR → CONTAR</h2>
+      <p>Um processo simples que você poderá aplicar sempre que precisar preparar uma história.</p>
+    </div>
+    <div class="method-track">
+      <div class="method-steps-mini">
+        <div class="mini-step"><div class="step-mark">1</div><span class="mini-label">Ler</span></div>
+        <span class="mini-arrow">→</span>
+        <div class="mini-step"><div class="step-mark">2</div><span class="mini-label">Ver</span></div>
+        <span class="mini-arrow">→</span>
+        <div class="mini-step"><div class="step-mark">3</div><span class="mini-label">Marcar</span></div>
+        <span class="mini-arrow">→</span>
+        <div class="mini-step"><div class="step-mark">4</div><span class="mini-label">Contar</span></div>
+      </div>
+      <p class="method-teaser">Cada etapa tem um papel específico no processo — e é dentro do curso que você aprende exatamente o que fazer em cada uma delas, com exemplos práticos aplicados a histórias reais, o <strong>Desafio dos 30 Minutos</strong> e o <strong>Mapa de Memorização da História</strong> para replicar em qualquer texto.</p>
+    </div>
+    <div class="btn-wrap method-cta"><a href="#oferta" class="btn btn-primary js-open-checkout">Quero aprender o método completo</a></div>
+  </div>
+</section>
+
+<!-- ===================== TÉCNICA DOS 30 MINUTOS ===================== -->
+<section class="timer-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Uma história. 30 minutos. Um novo jeito de se preparar.</h2>
+    </div>
+    <div class="timer-strip">
+      <div class="timer-seg"><span class="min">6 min</span><span class="lab">Ler</span></div>
+      <div class="timer-seg"><span class="min">8 min</span><span class="lab">Ver</span></div>
+      <div class="timer-seg"><span class="min">6 min</span><span class="lab">Marcar</span></div>
+      <div class="timer-seg"><span class="min">10 min</span><span class="lab">Contar</span></div>
+    </div>
+    <p class="timer-note">Na primeira tentativa, podem existir pequenas hesitações. Na segunda, você começa a encontrar seu ritmo. Na terceira, algo muda: <strong>a história começa a ser contada por você, e não simplesmente repetida por você.</strong></p>
+  </div>
+</section>
+
+<!-- ===================== IMPROVISAÇÃO ===================== -->
+<section class="improv-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>E se eu não falar exatamente como está escrito?</h2>
+      <p>Existem partes diferentes dentro de uma história — e você vai aprender a reconhecer cada uma delas.</p>
+    </div>
+    <div class="improv-grid">
+      <div class="improv-card">
+        <h4>O que precisa ser preservado</h4>
+        <p>Os personagens, o conflito, os acontecimentos importantes, a sequência e o final.</p>
+      </div>
+      <div class="improv-card">
+        <h4>O que pode ganhar suas palavras</h4>
+        <p>A essência continua ali, mesmo quando a frase muda de forma para caber na sua voz.</p>
+      </div>
+      <div class="improv-card">
+        <h4>O que nasce durante a contação</h4>
+        <p>Um gesto, uma expressão, uma pausa, um som, uma pequena repetição — vida diante das crianças.</p>
+      </div>
+    </div>
+    <div class="improv-teaser">
+      <p>Dentro do curso, você vê exemplos reais de histórias inteiras passando por essa transformação — do texto original até a versão contada com naturalidade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REGRA DE OURO ===================== -->
+<section class="rule-section">
+  <div class="container">
+    <p class="rule-quote">"Não invente uma nova história. Habite a história que você já conhece."</p>
+    <p class="sub">Improvisar significa ter liberdade para encontrar diferentes maneiras de expressar aquilo que você já consegue visualizar — preservando a essência, os acontecimentos e a beleza da narrativa.</p>
+  </div>
+</section>
+
+<!-- ===================== MÓDULOS ===================== -->
+<section class="modules-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>O que você vai encontrar dentro do curso</h2>
+    </div>
+    <div class="module-list">
+      <div class="module-item">
+        <span class="module-num">Módulo 1</span>
+        <div>
+          <h3>Uma Nova Forma de Memorizar Histórias</h3>
+          <div class="lesson">
+            <strong>O maior erro ao tentar decorar uma história</strong>
+            <span>Entenda por que memorizar palavra por palavra pode deixar a contação mais difícil.</span>
+          </div>
+        </div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Módulo 2</span>
+        <div>
+          <h3>Histórias Transformadas em Imagens</h3>
+          <div class="lesson">
+            <strong>Como nunca esquecer a sequência</strong>
+            <span>Identifique as principais cenas e acontecimentos que formam o caminho da história.</span>
+          </div>
+          <div class="lesson">
+            <strong>Técnica da Imagem Interna</strong>
+            <span>Transforme aquilo que você lê em imagens mentais que ajudam a lembrar o que acontece.</span>
+          </div>
+        </div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Módulo 3</span>
+        <div>
+          <h3>Prepare uma História em 30 Minutos</h3>
+          <div class="lesson">
+            <strong>A Técnica dos 30 Minutos</strong>
+            <span>Conheça o passo a passo LER → VER → MARCAR → CONTAR na prática.</span>
+          </div>
+        </div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Módulo 4</span>
+        <div>
+          <h3>A Liberdade de Contar com Suas Palavras</h3>
+          <div class="lesson">
+            <strong>Como improvisar sem decorar palavra por palavra</strong>
+            <span>Entenda o que precisa permanecer e o que pode ser contado com suas próprias palavras.</span>
+          </div>
+          <div class="lesson">
+            <strong>A regra de ouro da improvisação</strong>
+            <span>Dê liberdade para sua voz, seus gestos e sua expressão sem perder a essência.</span>
+          </div>
+        </div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Módulo 5</span>
+        <div>
+          <h3>Colocando o Método em Prática</h3>
+          <div class="lesson">
+            <strong>Desafio dos 30 Minutos</strong>
+            <span>Aplique todo o processo em uma história nova e sinta a diferença na prática.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MATERIAL COMPLEMENTAR ===================== -->
+<section class="material-section">
+  <div class="container material-grid">
+    <div>
+      <span class="eyebrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z" fill="#1E64B4"/></svg> Bônus incluso</span>
+      <h2>E você ainda recebe o Mapa de Memorização da História</h2>
+      <p>Um material criado para ajudar você a transformar qualquer história em um mapa visual simples — para imprimir, usar durante o aprendizado e levar para sua rotina.</p>
+      <p style="color:var(--ink-soft);">Em vez de páginas de anotações, você terá diante dos olhos o caminho da história.</p>
+    </div>
+    <div class="material-card">
+      <h3 style="font-size:1.1rem;">O que você registra no mapa:</h3>
+      <ul class="material-fields">
+        <li>Nome da história</li>
+        <li>Personagem principal</li>
+        <li>O que a personagem deseja</li>
+        <li>Imagem 1</li>
+        <li>Imagem 2</li>
+        <li>Imagem 3</li>
+        <li>Imagem 4</li>
+        <li>Imagem 5</li>
+        <li>Imagem final</li>
+        <li>Frases que precisam ser preservadas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESULTADOS ===================== -->
+<section class="results-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>O que pode mudar depois que você aprender o método?</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-card"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1E64B4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Preparar-se para uma contação sem passar horas tentando decorar.</div>
+      <div class="result-card"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1E64B4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ter mais clareza sobre a sequência dos acontecimentos.</div>
+      <div class="result-card"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1E64B4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Diminuir a dependência do texto durante a contação.</div>
+      <div class="result-card"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1E64B4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Encontrar suas próprias palavras sem perder a essência.</div>
+      <div class="result-card"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1E64B4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ter mais liberdade para usar gestos, pausas, sons e expressões.</div>
+      <div class="result-card"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1E64B4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Olhar mais para as crianças e menos para as páginas.</div>
+    </div>
+    <p class="results-close">Porque quando você sabe para onde a história vai, não precisa decorar cada passo para chegar até lá.</p>
+  </div>
+</section>
+
+<!-- ===================== PROVA SOCIAL ===================== -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Veja o que professoras e educadoras estão dizendo</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <q>"Eu tinha medo de esquecer e ficava presa ao livro o tempo todo. Depois do método, consegui aplicar e me senti muito mais segura durante a contação."</q>
+        <div class="test-who">— Depoimento de aluna</div>
+      </div>
+      <div class="test-card">
+        <q>"Não sabia como memorizar sem decorar palavra por palavra. Hoje passei a contar com minhas próprias palavras, sem perder a essência da história."</q>
+        <div class="test-who">— Depoimento de aluna</div>
+      </div>
+      <div class="test-card">
+        <q>"Consegui aplicar o método na primeira semana. Hoje olho mais para as crianças e menos para as páginas do livro."</q>
+        <div class="test-who">— Depoimento de aluna</div>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--ink-soft);font-size:.85rem;margin-top:24px;">[Espaço reservado para depoimentos em vídeo, prints ou textos reais de alunas.]</p>
+  </div>
+</section>
+
+<!-- ===================== AUTORA ===================== -->
+<section class="author-section">
+  <div class="container author-grid">
+    <div class="author-photo">
+      <img src="elda-paz-foto.jpg" alt="Elda Paz">
+    </div>
+    <div>
+      <span class="eyebrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z" fill="#F5B400"/></svg> Quem vai ensinar você</span>
+      <h2>Elda Paz</h2>
+      <p>Psicopedagoga, professora e autora, Elda Paz dedica seu trabalho à educação, à infância e ao desenvolvimento de experiências que aproximam adultos e crianças por meio do aprendizado e das histórias.</p>
+      <p>Reúne sua experiência como educadora Waldorf e contadora de histórias — dos canais "Elda Paz" e "Contos de Paz" — neste curso, para ensinar uma forma simples e prática de preparar histórias para serem contadas com mais naturalidade.</p>
+      <p style="color:var(--blue-primary);font-weight:600;">Mais do que ensinar você a decorar um texto, a proposta é ajudar você a compreender a narrativa, enxergá-la por dentro e encontrar liberdade para contá-la com suas próprias palavras.</p>
+      <div class="author-books">
+        <span class="book-chip">📖 Infância Plena</span>
+        <span class="book-chip">📖 Plena de Mim</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OFERTA ===================== -->
+<section class="offer-section" id="oferta">
+  <div class="container">
+    <div class="section-head">
+      <h2>Tudo o que você precisa para começar a preparar suas histórias de uma nova maneira</h2>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-includes">
+        <h3 style="color:var(--white);font-size:1.2rem;">Curso completo: Contação de Histórias — Como decorar uma história em menos de 30 minutos</h3>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#F5B400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 5 módulos com o passo a passo do método</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#F5B400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Método LER → VER → MARCAR → CONTAR</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#F5B400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Aulas sobre memorização por imagens</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#F5B400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Técnicas para lembrar a sequência das histórias</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#F5B400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Orientações para improvisar sem perder a essência</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#F5B400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Desafio prático dos 30 minutos</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#F5B400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Bônus: Mapa de Memorização da História</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#F5B400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Acesso imediato e vitalício, no seu ritmo</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <span class="price-old">De R$197</span>
+        <span class="price-new"><sup>R$</sup>97</span>
+        <span class="price-installment">ou 3x de R$34,03 &nbsp;·&nbsp; acesso imediato</span>
+        <a href="#" class="btn btn-primary js-open-checkout">Quero garantir meu acesso</a>
+        <span class="price-guarantee">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke="#4C5A6B" stroke-width="1.6"/></svg>
+          7 dias de garantia
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RECAP ===================== -->
+<section class="recap-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Recapitulando tudo o que você recebe</h2>
+    </div>
+    <div class="recap-tags">
+      <span>Curso completo</span>
+      <span>5 módulos</span>
+      <span>Método dos 4 passos</span>
+      <span>Técnica da Imagem Interna</span>
+      <span>Caminho das Imagens</span>
+      <span>Técnica dos 30 Minutos</span>
+      <span>Estratégias de improviso</span>
+      <span>Desafio prático</span>
+      <span>Mapa de Memorização</span>
+    </div>
+    <p style="margin-top:24px;font-weight:600;color:var(--blue-deep);">Tudo isso por 3x de R$34,03 ou R$97 à vista.</p>
+    <div class="btn-wrap"><a href="#oferta" class="btn btn-primary js-open-checkout">Sim, quero aprender a contar sem decorar palavra por palavra</a></div>
+  </div>
+</section>
+
+<!-- ===================== GARANTIA ===================== -->
+<section class="guarantee-section">
+  <div class="container">
+    <div class="guarantee-box">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke="#1E64B4" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="#F5B400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <h3>Você tem 7 dias para conhecer o curso.</h3>
+        <p>Entre, assista às aulas, conheça o método e coloque os exercícios em prática. Se dentro do período de garantia você perceber que o curso não faz sentido para você, basta solicitar o reembolso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OBJEÇÕES ===================== -->
+<section class="faq-objections">
+  <div class="container">
+    <div class="section-head">
+      <h2>Suas dúvidas, respondidas</h2>
+    </div>
+    <div class="accordion">
+      <details class="acc-item" open>
+        <summary>Mas eu não tenho uma memória boa...<span class="icon-plus"></span></summary>
+        <div class="acc-body">Você não precisa ter. A proposta do método é justamente parar de depender da memorização de frases. Em vez disso, você aprende a organizar a narrativa por meio de imagens e acontecimentos.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Eu preciso decorar a história inteira?<span class="icon-plus"></span></summary>
+        <div class="acc-body">Não. Você precisa compreender a estrutura, saber quais acontecimentos são importantes e conhecer o caminho que leva do começo ao final.</div>
+      </details>
+      <details class="acc-item">
+        <summary>E se eu trocar algumas palavras?<span class="icon-plus"></span></summary>
+        <div class="acc-body">A proposta não é repetir mecanicamente cada frase. Você aprenderá a preservar a essência da história enquanto encontra formas naturais de expressar as imagens e acontecimentos da narrativa.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Eu nunca contei histórias. Consigo acompanhar?<span class="icon-plus"></span></summary>
+        <div class="acc-body">O método começa pela base: compreender a história, visualizar suas cenas, criar o mapa da sequência e fazer sua primeira contação.</div>
+      </details>
+      <details class="acc-item">
+        <summary>O método serve somente para professoras?<span class="icon-plus"></span></summary>
+        <div class="acc-body">O curso foi desenvolvido pensando especialmente em quem utiliza histórias em contextos educativos, mas pode ser aplicado por qualquer pessoa que deseje mais segurança e naturalidade ao contar histórias.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Preciso assistir tudo de uma vez?<span class="icon-plus"></span></summary>
+        <div class="acc-body">Não. Você poderá seguir as aulas no seu ritmo, com acesso vitalício ao curso.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FECHAMENTO ===================== -->
+<section class="closing-section">
+  <div class="container">
+    <h2 style="max-width:700px;margin:0 auto 22px;">Uma boa contação não começa quando você decora todas as palavras.</h2>
+    <div class="closing-lines">
+      <p>Ela começa quando você conhece tão bem o caminho da história que consegue caminhar por ele sem precisar ficar olhando para o texto a cada instante.</p>
+    </div>
+    <p class="closing-final">Não decore palavras. Decore imagens.<br>Não memorize frases. Memorize acontecimentos.<br>Não procure a próxima palavra. Procure a próxima cena.</p>
+    <p class="closing-price">R$97 <span style="font-size:.55em;color:var(--ink-soft);font-family:'Work Sans';font-weight:400;">ou 3x de R$34,03</span></p>
+    <div class="btn-wrap"><a href="#oferta" class="btn btn-primary js-open-checkout">Quero começar agora</a></div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="accordion">
+      <details class="acc-item">
+        <summary>Como recebo o acesso?<span class="icon-plus"></span></summary>
+        <div class="acc-body">Após a confirmação da compra, você recebe por e-mail as orientações para acessar o curso online.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Por quanto tempo tenho acesso?<span class="icon-plus"></span></summary>
+        <div class="acc-body">O acesso é vitalício — você pode assistir quando quiser, no seu ritmo.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Posso assistir pelo celular?<span class="icon-plus"></span></summary>
+        <div class="acc-body">Sim. O curso pode ser acessado por celular, tablet ou computador.</div>
+      </details>
+      <details class="acc-item">
+        <summary>O curso possui certificado?<span class="icon-plus"></span></summary>
+        <div class="acc-body">Este curso não emite certificado — o foco é 100% prático, direto ao método.</div>
+      </details>
+      <details class="acc-item">
+        <summary>O material complementar está incluído?<span class="icon-plus"></span></summary>
+        <div class="acc-body">Sim. Você terá acesso ao Mapa de Memorização da História para usar na preparação das suas histórias.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Existe garantia?<span class="icon-plus"></span></summary>
+        <div class="acc-body">Sim. Você tem 7 dias de garantia conforme as condições apresentadas no momento da compra.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Quando posso começar?<span class="icon-plus"></span></summary>
+        <div class="acc-body">O acesso é imediato, assim que a compra for confirmada.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="eldapaz-logo.png" alt="Elda Paz">
+    <p>© 2026 Elda Paz. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="#oferta" class="btn btn-primary js-open-checkout">Garantir por R$97</a>
+</div>
+
+<!-- ===================== MODAL DE CHECKOUT ===================== -->
+<div class="modal-overlay" id="checkout-modal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button type="button" class="modal-close" id="modal-close-btn" aria-label="Fechar">&times;</button>
+    <h3 id="modal-title">Quase lá! Preencha para continuar</h3>
+    <p class="modal-sub">Seus dados garantem seu acesso e o envio das informações da compra.</p>
+    <form id="checkout-form">
+      <div class="modal-field">
+        <label for="modal-name">Nome completo</label>
+        <input type="text" id="modal-name" name="name" placeholder="Seu nome completo" required>
+      </div>
+      <div class="modal-field">
+        <label for="modal-email">E-mail</label>
+        <input type="email" id="modal-email" name="email" placeholder="seu@email.com" required>
+      </div>
+      <div class="modal-field">
+        <label for="modal-phone">Telefone / WhatsApp</label>
+        <input type="tel" id="modal-phone" name="phone" placeholder="(00) 00000-0000" inputmode="numeric" maxlength="15" required>
+      </div>
+      <button type="submit" class="btn btn-primary modal-submit">Ir para o pagamento</button>
+      <p class="modal-note">Você será redirecionada para o ambiente seguro de pagamento.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+  (function(){
+    // LINK PROVISÓRIO — troque pelo link real do produto na Hotmart assim que estiver disponível
+    var HOTMART_URL = "https://pay.hotmart.com/SEU-CODIGO-AQUI";
+
+    var modal = document.getElementById('checkout-modal');
+    var form = document.getElementById('checkout-form');
+    var closeBtn = document.getElementById('modal-close-btn');
+    var openTriggers = document.querySelectorAll('.js-open-checkout');
+    var phoneInput = document.getElementById('modal-phone');
+
+    phoneInput.addEventListener('input', function(e){
+      var digits = e.target.value.replace(/\D/g, '').slice(0, 11);
+      var formatted = digits;
+      if(digits.length > 10){
+        formatted = digits.replace(/(\d{2})(\d{5})(\d{0,4})/, function(m, a, b, c){
+          return '(' + a + ') ' + b + (c ? '-' + c : '');
+        });
+      } else if(digits.length > 6){
+        formatted = digits.replace(/(\d{2})(\d{4})(\d{0,4})/, function(m, a, b, c){
+          return '(' + a + ') ' + b + (c ? '-' + c : '');
+        });
+      } else if(digits.length > 2){
+        formatted = digits.replace(/(\d{2})(\d{0,5})/, function(m, a, b){
+          return '(' + a + ')' + (b ? ' ' + b : '');
+        });
+      } else if(digits.length > 0){
+        formatted = '(' + digits;
+      }
+      e.target.value = formatted;
+    });
+
+    function openModal(e){
+      if(e) e.preventDefault();
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    openTriggers.forEach(function(btn){
+      btn.addEventListener('click', openModal);
+    });
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('modal-name').value.trim();
+      var email = document.getElementById('modal-email').value.trim();
+      var phone = document.getElementById('modal-phone').value.trim();
+      if(!name || !email || !phone){ return; }
+      var url = HOTMART_URL
+        + (HOTMART_URL.indexOf('?') > -1 ? '&' : '?')
+        + 'name=' + encodeURIComponent(name)
+        + '&email=' + encodeURIComponent(email)
+        + '&phone=' + encodeURIComponent(phone);
+      window.location.href = url;
+    });
+  })();
+</script>
+
+</body>
+</html>
